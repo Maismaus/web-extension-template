@@ -6,7 +6,8 @@ export default defineConfig({
             formats: ["es"],
             entry: {
                 main: "src/main/index.ts",
-                ui: "src/ui/index.tsx"
+                ui: "src/ui/index.tsx",
+                dockablepane: "src/ui/dockablepane.tsx"
             }
         },
         rollupOptions: {

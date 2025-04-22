@@ -3,7 +3,8 @@
     "entryPoints": {
       "main": "main.js",
       "ui": {
-        "tab": "ui.js"
+        "tab": "ui.js",
+        "dockablepane": "dockablepane.js"
       }
     }
   }
