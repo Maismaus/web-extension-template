@@ -1,5 +1,5 @@
 {
-  "name": "@mendix/sample-extension",
+  "name": "@knaapp/easyenums",
   "version": "0.1.0",
   "type": "module",
   "description": "Extension for Mendix Studio Pro",

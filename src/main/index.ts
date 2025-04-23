@@ -4,12 +4,12 @@ class Main implements IComponent {
     async loaded() {
         // Add a menu item to the Extensions menu
         await studioPro.ui.extensionsMenu.add({
-            menuId: "myextension.MainMenu",
+            menuId: "easyenums.MainMenu",
             caption: "MyExtension Menu",
             subMenus: [
-                { menuId: "myextension.ShowTabMenuItem", caption: "Show tab" },
-                { menuId: "myextension.ShowDockMenuItem", caption: "Show dock pane" },
-                { menuId: "myextension.HideDockMenuItem", caption: "Hide dock pane" },
+                { menuId: "easyenums.ShowTabMenuItem", caption: "Show tab" },
+                { menuId: "easyenums.ShowDockMenuItem", caption: "Show dock pane" },
+                { menuId: "easyenums.HideDockMenuItem", caption: "Hide dock pane" },
             ],
         });
 
@@ -19,7 +19,7 @@ class Main implements IComponent {
                 initialPosition: "right",
             },
             {
-                componentName: "extension/myextension",
+                componentName: "extension/easyenums",
                 uiEntrypoint: "dockablepane",
             });
 
@@ -27,21 +27,21 @@ class Main implements IComponent {
         studioPro.ui.extensionsMenu.addEventListener(
             "menuItemActivated",
             (args) => {
-                if (args.menuId === "myextension.ShowTabMenuItem") {
+                if (args.menuId === "easyenums.ShowTabMenuItem") {
                     studioPro.ui.tabs.open(
                         {
                             title: "My Extension Tab",
                         },
                         {
-                            componentName: "extension/myextension",
+                            componentName: "extension/easyenums",
                             uiEntrypoint: "tab",
                         }
                     );
                 }
-                else if (args.menuId === "myextension.ShowDockMenuItem") {
+                else if (args.menuId === "easyenums.ShowDockMenuItem") {
                     studioPro.ui.panes.open(paneHandle);
                 }
-                else if (args.menuId === "myextension.HideDockMenuItem") {
+                else if (args.menuId === "easyenums.HideDockMenuItem") {
                     studioPro.ui.panes.close(paneHandle);
                 }
             }

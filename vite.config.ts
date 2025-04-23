@@ -13,6 +13,7 @@ export default defineConfig({
         rollupOptions: {
             external: ["@mendix/component-framework", "@mendix/model-access-sdk"]
         },
-        outDir: "./dist/myextension"
+        outDir: "../../Mendix/Playground-main/webextensions/easyenums",
+        target: "esnext"
     }
 } satisfies UserConfig);
